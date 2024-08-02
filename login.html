@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login</title>
+    <link rel="stylesheet" href="./style.css">
+    <script src="./app.js" defer></script>
+</head>
+<body>
+    <div class="nav">
+        <div class="logo">
+            <p> <a href="./index.html">Logo</a></p>
+        </div>
+        <div class="right-links">
+        
+            <a href="./sign.html">SignUp</a>
+            <a href="#">LogIn</a>
+            <a href="./profile.html">Change Profile</a>
+            <a href="#"><button class="btn"  onclick="logout()"  style=" height: 39px; width: 120px;">logOut</button></a>
+        </div>
+    </div>
+
+   
+
+   
+
+ <div class="container">
+    <div class="box form-box">
+        <header>LogIn</header>
+        <form onsubmit="login(event)">
+          
+
+            <div class="field  input">
+                <label for="email">Email
+                    <input type="text" name="email" id="login-email" placeholder="Enter your email" required>
+                </label>
+            </div>
+
+            <div class="field  input">
+                <label for="password">Password
+                    <input type="password" name="password" id="login-password" placeholder="Enter your password" required>
+                </label>
+            </div>
+
+           
+
+            <div class="field ">
+            
+                    <input type="submit" class="btn" name="submit" value="login" required>
+                   
+       
+            </div>
+
+            <div class="link">
+                Already a member? <a href="./profile.html">Profile</a> 
+            </div>
+        </form>
+
+       </div>
+</div>
+
+<script src="./firebase_db.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-app.js"></script>    
+<script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-firestore.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-storage.js"></script>
+
+<script>
+ const firebaseConfig = {
+   apiKey: "AIzaSyBqep-BS8VmaeqNGZqqZW0ENYCAfgD74gs",
+   authDomain: "testingapppp-19630.firebaseapp.com",
+   projectId: "testingapppp-19630",
+   storageBucket: "testingapppp-19630.appspot.com",
+   messagingSenderId: "635794256661",
+   appId: "1:635794256661:web:2f306020e32785f01c2f1c"
+ };
+ firebase.initializeApp(firebaseConfig);
+
+</script>
+
+</body>
+</html>
